@@ -7,13 +7,25 @@ import {
   ItemDetailsBox,
 } from "./CharacterItem.styled";
 
-export const CharacterItem: React.FC = () => {
+interface CharacterItemProps {
+  id: number;
+  image: string;
+  name: string;
+  species: string;
+}
+
+export const CharacterItem: React.FC<CharacterItemProps> = ({
+  id,
+  image,
+  name,
+  species,
+}) => {
   return (
     <CharactersItem>
-      <CharacterItemImg />
+      <CharacterItemImg src={image} />
       <ItemDetailsBox>
-        <CharacterItemTitle>title</CharacterItemTitle>
-        <CharacterItemSpecie>specie</CharacterItemSpecie>
+        <CharacterItemTitle>{name}</CharacterItemTitle>
+        <CharacterItemSpecie>{species}</CharacterItemSpecie>
       </ItemDetailsBox>
     </CharactersItem>
   );
