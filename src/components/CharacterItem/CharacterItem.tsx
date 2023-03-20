@@ -15,7 +15,7 @@ interface CharacterItemProps {
 }
 
 export const CharacterItem: React.FC<CharacterItemProps> = ({
-  id,
+  // id,
   image,
   name,
   species,

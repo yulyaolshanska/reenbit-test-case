@@ -4,7 +4,7 @@ import { CharactersCardList } from "./CharactersList.styled";
 import { useGetCharactersQuery } from "redux/charactersApi";
 
 export const CharactersList: React.FC = () => {
-  const { data, error, isLoading } = useGetCharactersQuery("");
+  const { data } = useGetCharactersQuery("");
   console.log("data", data);
   const characters = data?.results ?? [];
   // console.log("results", characters);
