@@ -1,13 +1,17 @@
 {
   "files": {
     "main.css": "/reenbit-test-case/static/css/main.7acaea2f.css",
-    "main.js": "/reenbit-test-case/static/js/main.045a74c8.js",
+    "main.js": "/reenbit-test-case/static/js/main.a5506f34.js",
+    "static/js/608.3665e0b8.chunk.js": "/reenbit-test-case/static/js/608.3665e0b8.chunk.js",
+    "static/js/692.f42ad025.chunk.js": "/reenbit-test-case/static/js/692.f42ad025.chunk.js",
     "index.html": "/reenbit-test-case/index.html",
     "main.7acaea2f.css.map": "/reenbit-test-case/static/css/main.7acaea2f.css.map",
-    "main.045a74c8.js.map": "/reenbit-test-case/static/js/main.045a74c8.js.map"
+    "main.a5506f34.js.map": "/reenbit-test-case/static/js/main.a5506f34.js.map",
+    "608.3665e0b8.chunk.js.map": "/reenbit-test-case/static/js/608.3665e0b8.chunk.js.map",
+    "692.f42ad025.chunk.js.map": "/reenbit-test-case/static/js/692.f42ad025.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.045a74c8.js"
+    "static/js/main.a5506f34.js"
   ]
 }
