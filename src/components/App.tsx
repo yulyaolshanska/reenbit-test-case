@@ -19,7 +19,7 @@ export const App: React.FC = () => {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<CharactersPage />}></Route>
-          <Route path="/details" element={<CharacterDetailsPage />} />
+          <Route path="/details/:id" element={<CharacterDetailsPage />} />
         </Routes>
       </Suspense>
     </ThemeProvider>
