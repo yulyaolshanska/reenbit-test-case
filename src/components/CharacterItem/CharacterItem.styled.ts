@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const CharactersItem = styled.li`
   background: #ffffff;
+  overflow: hidden;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
     0px 2px 4px rgba(0, 0, 0, 0.14);
   border-radius: 4px;
-  @media ${(p) => p.theme.media.tablet} {
+  margin-bottom: 32px;
+  @media screen and (min-width: 768px) and (max-width: 939px) {
     &:not(:nth-child(2n)) {
       margin-right: 20px;
     }
@@ -13,8 +15,8 @@ export const CharactersItem = styled.li`
       margin-bottom: 20px;
     }
   }
-  @media screen and (min-width: 940px) {
-    &:not(:nth-child(3n)) {
+  @media screen and (min-width: 940px) and (max-width: 1279px) {
+    &:not(:nth-child(3n + 3)) {
       margin-right: 20px;
     }
     &:not(:nth-last-child(-n + 3)) {
@@ -22,6 +24,7 @@ export const CharactersItem = styled.li`
     }
   }
   @media ${(p) => p.theme.media.desktop} {
+    width: 240px;
     &:not(:nth-child(4n)) {
       margin-right: 20px;
     }
@@ -30,7 +33,14 @@ export const CharactersItem = styled.li`
     }
   }
 `;
-export const CharacterItemImg = styled.img``;
+export const CharacterItemImg = styled.img`
+  @media ${(p) => p.theme.media.mobileM} {
+    width: 312px;
+  }
+  @media ${(p) => p.theme.media.desktop} {
+    width: 240px;
+  }
+`;
 export const ItemDetailsBox = styled.div`
   padding: 12px 16px;
 `;

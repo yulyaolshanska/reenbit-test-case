@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import {
   CharacterItemImg,
   CharacterItemSpecie,
@@ -15,18 +16,22 @@ interface CharacterItemProps {
 }
 
 export const CharacterItem: React.FC<CharacterItemProps> = ({
-  // id,
+  id,
   image,
   name,
   species,
 }) => {
+  const location = useLocation();
+
   return (
     <CharactersItem>
-      <CharacterItemImg src={image} />
-      <ItemDetailsBox>
-        <CharacterItemTitle>{name}</CharacterItemTitle>
-        <CharacterItemSpecie>{species}</CharacterItemSpecie>
-      </ItemDetailsBox>
+      <NavLink to={`/details/${id}`} state={{ from: location }}>
+        <CharacterItemImg src={image} />
+        <ItemDetailsBox>
+          <CharacterItemTitle>{name}</CharacterItemTitle>
+          <CharacterItemSpecie>{species}</CharacterItemSpecie>
+        </ItemDetailsBox>
+      </NavLink>
     </CharactersItem>
   );
 };

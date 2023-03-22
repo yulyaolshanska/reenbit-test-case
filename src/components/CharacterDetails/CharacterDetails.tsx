@@ -23,8 +23,6 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({
   type,
   origin,
 }) => {
-  console.log("type", type);
-
   return (
     <CharacterCard>
       <CharacterCardTitle>Information</CharacterCardTitle>

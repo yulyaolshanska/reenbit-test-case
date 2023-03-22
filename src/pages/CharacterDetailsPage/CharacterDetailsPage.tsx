@@ -17,12 +17,9 @@ import {
 
 const CharacterDetailsPage: React.FC = () => {
   const { id = "" } = useParams();
-  console.log("id", id);
-
   const { data: character, isLoading } = useGetCharacterByIdQuery(id);
   const { state } = useLocation();
   const backLinkHref = state?.from ?? "/";
-  console.log("state?.from.pathname", state?.from);
   const {
     gender = "",
     image = "",
@@ -32,7 +29,7 @@ const CharacterDetailsPage: React.FC = () => {
     type = "",
   } = character ?? {};
   const origin = character?.origin?.name ?? "";
-  console.log("origin", origin);
+
   return (
     <Container>
       <BackButton>
