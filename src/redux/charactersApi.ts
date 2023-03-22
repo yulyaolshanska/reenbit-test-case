@@ -20,16 +20,35 @@ interface CharactersResponse {
   }[];
 }
 
+interface CharacterResponse {
+  id: number;
+  gender: string | null;
+  name: string;
+  status: string;
+  image: string;
+  species: string;
+  origin: {
+    name: string;
+    url: string;
+  };
+  type: string;
+}
+
 export const charactersApi = createApi({
   reducerPath: "characterApi",
   baseQuery: fetchBaseQuery({ baseUrl: "https://rickandmortyapi.com/api" }),
-  tagTypes: ["Characters"],
+  tagTypes: ["Characters", "Character"],
   endpoints: (builder) => ({
     getCharacters: builder.query<CharactersResponse, string>({
       query: () => "/character",
       providesTags: ["Characters"],
     }),
+    getCharacterById: builder.query<CharacterResponse, string>({
+      query: (id) => `/character/${id}`,
+      providesTags: ["Character"],
+    }),
   }),
 });
 
-export const { useGetCharactersQuery } = charactersApi;
+export const { useGetCharactersQuery, useGetCharacterByIdQuery } =
+  charactersApi;
