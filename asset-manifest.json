@@ -1,17 +1,25 @@
 {
   "files": {
     "main.css": "/reenbit-test-case/static/css/main.7acaea2f.css",
-    "main.js": "/reenbit-test-case/static/js/main.4183faca.js",
-    "static/js/608.a4a4d2bb.chunk.js": "/reenbit-test-case/static/js/608.a4a4d2bb.chunk.js",
-    "static/js/692.f42ad025.chunk.js": "/reenbit-test-case/static/js/692.f42ad025.chunk.js",
+    "main.js": "/reenbit-test-case/static/js/main.2534d961.js",
+    "static/js/608.15aa3513.chunk.js": "/reenbit-test-case/static/js/608.15aa3513.chunk.js",
+    "static/js/692.cc38f159.chunk.js": "/reenbit-test-case/static/js/692.cc38f159.chunk.js",
+    "static/js/71.fed2661a.chunk.js": "/reenbit-test-case/static/js/71.fed2661a.chunk.js",
+    "static/js/355.6a9d5f4d.chunk.js": "/reenbit-test-case/static/js/355.6a9d5f4d.chunk.js",
+    "static/media/logo-desktop@2x.png": "/reenbit-test-case/static/media/logo-desktop@2x.77794dda7098f5013647.png",
+    "static/media/logo-mob@2x.png": "/reenbit-test-case/static/media/logo-mob@2x.3f7edb47f6a521a50464.png",
+    "static/media/logo-desktop@1x.png": "/reenbit-test-case/static/media/logo-desktop@1x.d485c4c92261ab28df47.png",
+    "static/media/logo-mob@1x.png": "/reenbit-test-case/static/media/logo-mob@1x.0a2edcae324f9f90e33a.png",
     "index.html": "/reenbit-test-case/index.html",
     "main.7acaea2f.css.map": "/reenbit-test-case/static/css/main.7acaea2f.css.map",
-    "main.4183faca.js.map": "/reenbit-test-case/static/js/main.4183faca.js.map",
-    "608.a4a4d2bb.chunk.js.map": "/reenbit-test-case/static/js/608.a4a4d2bb.chunk.js.map",
-    "692.f42ad025.chunk.js.map": "/reenbit-test-case/static/js/692.f42ad025.chunk.js.map"
+    "main.2534d961.js.map": "/reenbit-test-case/static/js/main.2534d961.js.map",
+    "608.15aa3513.chunk.js.map": "/reenbit-test-case/static/js/608.15aa3513.chunk.js.map",
+    "692.cc38f159.chunk.js.map": "/reenbit-test-case/static/js/692.cc38f159.chunk.js.map",
+    "71.fed2661a.chunk.js.map": "/reenbit-test-case/static/js/71.fed2661a.chunk.js.map",
+    "355.6a9d5f4d.chunk.js.map": "/reenbit-test-case/static/js/355.6a9d5f4d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.4183faca.js"
+    "static/js/main.2534d961.js"
   ]
 }
