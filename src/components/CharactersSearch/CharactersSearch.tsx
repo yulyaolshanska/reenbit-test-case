@@ -17,7 +17,6 @@ export const CharactersSearch: React.FC<CharactersSearchProps> = ({
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get("filter");
   const [searchValue, setSearchValue] = useState(query || "");
-  // const [inputValue, setInputValue] = useState(query || "");
 
   useEffect(() => {
     setSearchParams({ filter: searchValue });

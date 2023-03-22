@@ -11,10 +11,6 @@ import {
   StyledNavLink,
 } from "./CharacterDetailsPage.styled";
 
-// interface stateType {
-//   from: { pathname: string };
-// }
-
 const CharacterDetailsPage: React.FC = () => {
   const { id = "" } = useParams();
   const { data: character, isLoading } = useGetCharacterByIdQuery(id);
