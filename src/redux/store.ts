@@ -9,10 +9,12 @@ import {
 } from "redux-persist";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { charactersApi } from "./charactersApi";
+import { persistedReducer } from "./authPersist";
 
 export const store = configureStore({
   reducer: {
     [charactersApi.reducerPath]: charactersApi.reducer,
+    auth: persistedReducer,
   },
   middleware: (getDefaultMiddleware) => [
     ...getDefaultMiddleware({
