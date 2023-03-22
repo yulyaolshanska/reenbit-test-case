@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "styles/globalStyle";
 import theme from "styles/theme";
 import Loader from "./Loader/Loader";
+import SharedLayout from "./SharedLayout/SharedLayout";
 
 const CharactersPage = lazy(
   () => import("../pages/CharactersPage/CharactersPage")
@@ -11,6 +12,7 @@ const CharactersPage = lazy(
 const CharacterDetailsPage = lazy(
   () => import("../pages/CharacterDetailsPage/CharacterDetailsPage")
 );
+const SignInPage = lazy(() => import("../pages/SignIn/SignInPage"));
 
 export const App: React.FC = () => {
   return (
@@ -18,8 +20,11 @@ export const App: React.FC = () => {
       <GlobalStyle />
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path="/" element={<CharactersPage />}></Route>
-          <Route path="/details/:id" element={<CharacterDetailsPage />} />
+          <Route path="/" element={<SharedLayout />}>
+            <Route index element={<CharactersPage />} />
+            <Route path="/details/:id" element={<CharacterDetailsPage />} />
+            <Route path="/signin" element={<SignInPage />} />
+          </Route>
         </Routes>
       </Suspense>
     </ThemeProvider>
