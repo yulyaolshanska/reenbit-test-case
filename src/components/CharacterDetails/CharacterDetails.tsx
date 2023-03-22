@@ -8,30 +8,46 @@ import {
   DetailsList,
 } from "./CharacterDetails.styled";
 
-export const CharacterDetails: React.FC = () => {
+interface CharacterDetailsProps {
+  gender: string | null;
+  status: string;
+  species: string;
+  origin: string;
+  type: string;
+}
+
+export const CharacterDetails: React.FC<CharacterDetailsProps> = ({
+  gender,
+  status,
+  species,
+  type,
+  origin,
+}) => {
+  console.log("type", type);
+
   return (
     <CharacterCard>
       <CharacterCardTitle>Information</CharacterCardTitle>
       <DetailsList>
         <DetailsItem>
           <DetailsLabel>Gender</DetailsLabel>
-          <DetailsInfo>gender</DetailsInfo>
+          <DetailsInfo>{gender}</DetailsInfo>
         </DetailsItem>
         <DetailsItem>
           <DetailsLabel>Status</DetailsLabel>
-          <DetailsInfo>status</DetailsInfo>
+          <DetailsInfo>{status}</DetailsInfo>
         </DetailsItem>
         <DetailsItem>
           <DetailsLabel>Specie</DetailsLabel>
-          <DetailsInfo>specie</DetailsInfo>
+          <DetailsInfo>{species}</DetailsInfo>
         </DetailsItem>
         <DetailsItem>
           <DetailsLabel>Origin</DetailsLabel>
-          <DetailsInfo>origin</DetailsInfo>
+          <DetailsInfo>{origin}</DetailsInfo>
         </DetailsItem>
         <DetailsItem>
           <DetailsLabel>Type</DetailsLabel>
-          <DetailsInfo>type</DetailsInfo>
+          <DetailsInfo>{type !== "" ? type : "Uknown"}</DetailsInfo>
         </DetailsItem>
       </DetailsList>
     </CharacterCard>
