@@ -1,4 +1,6 @@
 import React from "react";
+import Highlighter from "react-highlight-words";
+
 import { NavLink, useLocation } from "react-router-dom";
 import {
   CharacterItemImg,
@@ -13,6 +15,7 @@ interface CharacterItemProps {
   image: string;
   name: string;
   species: string;
+  searchValue: string;
 }
 
 export const CharacterItem: React.FC<CharacterItemProps> = ({
@@ -20,6 +23,7 @@ export const CharacterItem: React.FC<CharacterItemProps> = ({
   image,
   name,
   species,
+  searchValue,
 }) => {
   const location = useLocation();
 
@@ -28,7 +32,13 @@ export const CharacterItem: React.FC<CharacterItemProps> = ({
       <NavLink to={`/details/${id}`} state={{ from: location }}>
         <CharacterItemImg src={image} />
         <ItemDetailsBox>
-          <CharacterItemTitle>{name}</CharacterItemTitle>
+          <CharacterItemTitle>
+            <Highlighter
+              searchWords={[searchValue]}
+              autoEscape={true}
+              textToHighlight={name}
+            ></Highlighter>
+          </CharacterItemTitle>
           <CharacterItemSpecie>{species}</CharacterItemSpecie>
         </ItemDetailsBox>
       </NavLink>

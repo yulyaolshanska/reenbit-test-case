@@ -7,6 +7,11 @@ export const CharactersItem = styled.li`
     0px 2px 4px rgba(0, 0, 0, 0.14);
   border-radius: 4px;
   margin-bottom: 32px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+  }
   @media screen and (min-width: 768px) and (max-width: 939px) {
     &:not(:nth-child(2n)) {
       margin-right: 20px;
