@@ -3,13 +3,16 @@ import {
   SarchForm,
   SearchBtn,
   SearchFormInput,
+  StyledSearchIcon,
 } from "./CharactersSearch.styled";
 
 export const CharactersSearch: React.FC = () => {
   return (
     <SarchForm>
       <SearchFormInput />
-      <SearchBtn></SearchBtn>
+      <SearchBtn>
+        <StyledSearchIcon size="18px" />
+      </SearchBtn>
     </SarchForm>
   );
 };
