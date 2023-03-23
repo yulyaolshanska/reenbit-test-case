@@ -6,7 +6,7 @@ const Loader = () => {
   return (
     <Spinner>
       <RotatingLines
-        strokeColor="#F59256"
+        strokeColor="#12814d"
         strokeWidth="5"
         animationDuration="0.75"
         width="75"
