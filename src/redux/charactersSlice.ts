@@ -14,6 +14,12 @@ export const charactersSlice = createSlice({
         page: action.payload,
       };
     },
+    changeFilter(state, action) {
+      return {
+        ...state,
+        filter: action.payload,
+      };
+    },
   },
 });
 const charactersReducer = charactersSlice.reducer;

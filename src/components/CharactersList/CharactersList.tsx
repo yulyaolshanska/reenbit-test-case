@@ -20,10 +20,11 @@ export const CharactersList: React.FC<CharactersListProps> = ({
 }) => {
   const dispatch = useAppDispatch();
   const stateCurrentPage = useAppSelector(({ characters }) => characters.page);
+  const filter = useAppSelector(({ characters }) => characters.filter);
   const { changePage } = charactersSlice.actions;
   const [currentPage, setCurrentPage] = useState(stateCurrentPage);
   const [isLastPage, setIsLastPage] = useState(false);
-  const { data, isLoading } = useGetCharactersQuery(currentPage);
+  const { data, isLoading } = useGetCharactersQuery({ currentPage, filter });
   const characters = data?.results ?? [];
 
   const getFilteredCharacters = (search: string) => {

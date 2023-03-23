@@ -34,14 +34,19 @@ interface CharacterResponse {
   type: string;
 }
 
+interface CharacterRequest {
+  currentPage: number;
+  filter: string;
+}
+
 export const charactersApi = createApi({
   reducerPath: "characterApi",
   baseQuery: fetchBaseQuery({ baseUrl: "https://rickandmortyapi.com/api" }),
   tagTypes: ["Characters", "Character"],
   endpoints: (builder) => ({
-    getCharacters: builder.query<CharactersResponse, number>({
-      query: (currentPage) => {
-        const pageQuery = `?page=${currentPage}`;
+    getCharacters: builder.query<CharactersResponse, CharacterRequest>({
+      query: ({ currentPage, filter }) => {
+        const pageQuery = `?page=${currentPage}&&name=${filter}`;
         return `/character/${pageQuery}`;
       },
       providesTags: ["Characters"],

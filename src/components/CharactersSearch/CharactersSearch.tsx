@@ -1,5 +1,7 @@
+import { useAppDispatch } from "hooks/hooks";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { charactersSlice } from "redux/charactersSlice";
 import {
   SarchForm,
   SearchBtn,
@@ -14,6 +16,8 @@ interface CharactersSearchProps {
 export const CharactersSearch: React.FC<CharactersSearchProps> = ({
   onSearchSubmit,
 }) => {
+  const dispatch = useAppDispatch();
+  const { changeFilter } = charactersSlice.actions;
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get("filter");
   const [searchValue, setSearchValue] = useState(query || "");
@@ -21,6 +25,7 @@ export const CharactersSearch: React.FC<CharactersSearchProps> = ({
   useEffect(() => {
     setSearchParams({ filter: searchValue });
     onSearchSubmit(searchValue);
+    dispatch(changeFilter(searchValue));
   }, [searchValue, setSearchParams]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
