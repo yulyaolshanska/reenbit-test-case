@@ -1,6 +1,6 @@
 # Reenbit-test-case
 
-## https://rickandmotry.netlify.app/
+## https://rickandmorty-test-case.netlify.app
 
 ## Available Scripts
 
