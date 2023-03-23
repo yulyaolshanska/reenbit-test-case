@@ -1,4 +1,5 @@
 import { CharacterDetails } from "components/CharacterDetails/CharacterDetails";
+import Loader from "components/Loader/Loader";
 import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { useGetCharacterByIdQuery } from "redux/charactersApi";
@@ -34,7 +35,7 @@ const CharacterDetailsPage: React.FC = () => {
           Go Back
         </StyledNavLink>
       </BackButton>
-      {!isLoading && (
+      {!isLoading ? (
         <>
           <CharacterImg src={image} />
           <CharacterName>{name}</CharacterName>
@@ -46,6 +47,8 @@ const CharacterDetailsPage: React.FC = () => {
             origin={origin}
           />
         </>
+      ) : (
+        <Loader />
       )}
     </Container>
   );
