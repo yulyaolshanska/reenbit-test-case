@@ -17,8 +17,9 @@ export const CharacterCardTitle = styled.h2`
 export const DetailsList = styled.ul``;
 
 export const DetailsItem = styled.li`
-  padding: 10px 16px;
+  padding: 10px 0px;
   width: 100%;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.08);
   @media ${(p) => p.theme.media.tablet} {
     width: 413px;
     margin: 0 auto;
