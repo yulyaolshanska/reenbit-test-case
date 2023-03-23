@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    font-family:"Roboto",sans-serif;
   }
  */
   img {

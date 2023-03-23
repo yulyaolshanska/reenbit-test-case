@@ -9,13 +9,12 @@ export const Container = styled.div`
   align-items: center;
   background-color: #3e8f849e;
   /* justify-content: flex-end; */
-  padding: 15px 24px;
+  padding: 15px 20px;
   margin-left: auto;
   margin-right: auto;
   width: 360px;
 
   @media ${(p) => p.theme.media.tablet} {
-    padding: 15px 20px;
     width: 768px;
   }
   @media screen and (min-width: 940px) {
@@ -23,8 +22,6 @@ export const Container = styled.div`
   }
 
   @media ${(p) => p.theme.media.desktop} {
-    padding: 20px 20px;
-
     margin-left: auto;
     margin-right: auto;
     width: 1060px;
@@ -43,17 +40,22 @@ export const StyledHomeLink = styled(NavLink)`
   display: block;
   color: #0e5634;
   font-weight: 700;
+  @media ${(p) => p.theme.media.desktop} {
+    font-size: 18px;
+  }
 `;
 export const UserName = styled.p`
   margin-right: 15px;
   color: #0e5634;
   font-weight: 700;
+  @media ${(p) => p.theme.media.desktop} {
+    font-size: 18px;
+  }
 `;
 export const StyledNavLink = styled(NavLink)`
   display: flex;
   align-items: center;
   margin-left: auto;
-
   padding: 10px;
   font-size: 14px;
   border: 2px solid #3e8f849e;
@@ -61,14 +63,17 @@ export const StyledNavLink = styled(NavLink)`
   border-radius: 4px;
   color: #0e5634;
   font-weight: 700;
+  @media ${(p) => p.theme.media.desktop} {
+    font-size: 18px;
+  }
 `;
 export const LoginIcon = styled(FiLogIn)`
   margin-right: 10px;
 `;
 
 export const HomeIcon = styled(GrHomeRounded)`
-  margin-right: 10px;
-  /* fill: #0e5634; */
+  margin-right: 8px;
+  /* fill: #0e563494; */
 `;
 export const LogoutIcon = styled(BiLogOut)`
   margin-right: 10px;
@@ -84,4 +89,7 @@ export const SignOutButton = styled.button`
   border-radius: 4px;
   color: #0e5634;
   font-weight: 700;
+  @media ${(p) => p.theme.media.desktop} {
+    font-size: 15px;
+  }
 `;

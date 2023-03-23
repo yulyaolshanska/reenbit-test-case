@@ -5,9 +5,20 @@ import { IoArrowBackSharp } from "react-icons/io5";
 export const Container = styled.div`
   padding: 24px;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: column;
+  width: 360px;
+
   @media ${(p) => p.theme.media.tablet} {
-    /* padding: 76px 24px; */
+    width: 768px;
+  }
+  @media screen and (min-width: 940px) {
+    width: 940px;
+  }
+
+  @media ${(p) => p.theme.media.desktop} {
+    width: 1060px;
   }
 `;
 

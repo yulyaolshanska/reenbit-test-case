@@ -34,7 +34,7 @@ export const CharactersSearch: React.FC<CharactersSearchProps> = ({
 
   return (
     <SarchForm onChange={handleChange} onSubmit={handleSubmit}>
-      <SearchFormInput type="search" name="search" value={searchValue} />
+      <SearchFormInput type="search" name="search" defaultValue={searchValue} />
       <SearchBtn type="submit">
         <StyledSearchIcon size="18px" />
       </SearchBtn>

@@ -18,7 +18,7 @@ export const Logo: React.FC = () => {
         <source
           srcSet={`${LogoMob1x} 1x, ${LogoMob2x}  2x`}
           type="image/png"
-          media="(min-width: 320px)"
+          media="(min-width: 250px)"
         />
         <LogoImg src={LogoImg} alt="Rick and Morty" loading="lazy" />
       </picture>
