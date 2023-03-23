@@ -4,3 +4,4 @@ declare module "*.jpeg";
 declare module "*.jpg";
 declare module "react-highlight-words";
 declare module "react-google-button";
+declare module "react-facebook-login";

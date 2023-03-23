@@ -1,4 +1,5 @@
 import firebase from "firebase/compat/app";
+// import { FacebookAuthProvider } from "firebase/auth";
 import "firebase/compat/auth";
 
 const firebaseConfig = {
@@ -16,7 +17,11 @@ firebase.initializeApp(firebaseConfig);
 export const auth = firebase.auth();
 
 const provider = new firebase.auth.GoogleAuthProvider();
+const providerFacebook = new firebase.auth.FacebookAuthProvider();
 provider.setCustomParameters({ prompt: "select_account" });
+providerFacebook.setCustomParameters({ prompt: "select_account" });
 
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export const signInWithFacebook = () => auth.signInWithPopup(providerFacebook);
+
 export default firebase;
