@@ -1,8 +1,6 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { fetchBaseQuery } from "@reduxjs/toolkit/query";
 
-// import type { Characters } from "../types";
-
 interface CharactersResponse {
   info: {
     count: number;

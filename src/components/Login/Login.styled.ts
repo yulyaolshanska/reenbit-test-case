@@ -20,10 +20,8 @@ export const FacebookButton = styled.button`
   margin-top: 20px;
   background-color: #4c69ba;
   background-image: linear-gradient(#4c69ba, #3b55a0);
-  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
   text-shadow: 0 -1px 0 #354c8c;
   color: rgb(255, 255, 255);
-
   height: 50px;
   width: 240px;
   border: none;
@@ -42,15 +40,6 @@ export const FacebookButton = styled.button`
     background-color: #5b7bd5;
     background-image: linear-gradient(#5b7bd5, #4864b1);
   }
-  /* &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-right: #364e92 1px solid;
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png")
-      6px 6px no-repeat;
-  } */
 `;
 
 export const FacebookIcon = styled(FaFacebook)`

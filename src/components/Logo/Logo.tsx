@@ -2,7 +2,6 @@ import React from "react";
 import { LogoContainer, LogoImg } from "./Logo.styled";
 import logoDesktop from "../../images/logo-desktop@1x.png";
 import logoDesktop2x from "../../images/logo-desktop@2x.png";
-
 import LogoMob1x from "../../images/logo-mob@1x.png";
 import LogoMob2x from "../../images/logo-mob@2x.png";
 

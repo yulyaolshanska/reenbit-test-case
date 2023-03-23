@@ -76,11 +76,3 @@ export const CharacterImg = styled.img`
     margin-bottom: 16px;
   }
 `;
-
-// export const CardTitle = styled.h3`
-//
-// `;
-
-// export const CardTitle = styled.h2``;
-// export const CardTitle = styled.h2``;
-// export const CardTitle = styled.h2``;

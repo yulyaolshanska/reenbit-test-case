@@ -1,4 +1,3 @@
-// import React from "react";
 import Login from "components/Login/Login";
 import { Container } from "./LogInPage.styled";
 import { useAppDispatch } from "hooks/hooks";
@@ -9,7 +8,6 @@ import firebase from "../../firebase/firebase";
 const LoginPage: React.FC = () => {
   const { logIn } = authSlice.actions;
   const [user, setUser] = useState<object | null>(null);
-
   const dispatch = useAppDispatch();
   let currentUser = null;
 

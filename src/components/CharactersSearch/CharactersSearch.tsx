@@ -32,6 +32,7 @@ export const CharactersSearch: React.FC<CharactersSearchProps> = ({
     e.preventDefault();
     onSearchSubmit(searchValue);
   };
+
   const handleChange = (e: React.FormEvent<HTMLFormElement>) => {
     setSearchValue(e.currentTarget.search.value);
     onSearchSubmit(searchValue);

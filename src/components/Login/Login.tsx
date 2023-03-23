@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import GoogleButton from "react-google-button";
-// import FacebookLogin from "react-facebook-login";
 import { signInWithFacebook, signInWithGoogle } from "../../firebase/firebase";
 import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "hooks/hooks";

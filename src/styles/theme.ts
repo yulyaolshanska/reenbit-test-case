@@ -2,9 +2,7 @@ const theme = {
   colors: {
     background: "#E5E5E5",
     backdrop: " #11111199",
-    // accent: "#F59256",
     accent: " #0e5634",
-
     text: "#111321",
     primaryText: "#111111",
     primaryBtnText: "#111111",

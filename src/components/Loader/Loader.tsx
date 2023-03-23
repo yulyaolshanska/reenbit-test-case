@@ -2,7 +2,7 @@ import React from "react";
 import { RotatingLines } from "react-loader-spinner";
 import { Spinner } from "./Loader.styled";
 
-const Loader = () => {
+const Loader: React.FC = () => {
   return (
     <Spinner>
       <RotatingLines

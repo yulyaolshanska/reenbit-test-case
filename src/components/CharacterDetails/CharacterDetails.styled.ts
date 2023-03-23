@@ -40,5 +40,3 @@ export const DetailsInfo = styled.p`
   letter-spacing: 0.25px;
   color: #6e798c;
 `;
-
-// export const CharacterCard = styled.div``;

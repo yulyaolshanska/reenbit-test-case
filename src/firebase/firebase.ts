@@ -1,7 +1,5 @@
 import firebase from "firebase/compat/app";
-// import dotenv from "dotenv";
 import "firebase/compat/auth";
-// dotenv.config();
 
 const {
   REACT_APP_API_KEY,
