@@ -39,8 +39,11 @@ export const charactersApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "https://rickandmortyapi.com/api" }),
   tagTypes: ["Characters", "Character"],
   endpoints: (builder) => ({
-    getCharacters: builder.query<CharactersResponse, string>({
-      query: () => "/character",
+    getCharacters: builder.query<CharactersResponse, number>({
+      query: (currentPage) => {
+        const pageQuery = `?page=${currentPage}`;
+        return `/character/${pageQuery}`;
+      },
       providesTags: ["Characters"],
     }),
     getCharacterById: builder.query<CharacterResponse, string>({

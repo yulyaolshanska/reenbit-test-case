@@ -38,7 +38,7 @@ export const Box = styled.div`
 export const StyledHomeLink = styled(NavLink)`
   padding: 10px;
   display: block;
-  color: #0e5634;
+  color: ${(p) => p.theme.colors.accent};
   font-weight: 700;
   @media ${(p) => p.theme.media.desktop} {
     font-size: 18px;
@@ -46,7 +46,7 @@ export const StyledHomeLink = styled(NavLink)`
 `;
 export const UserName = styled.p`
   margin-right: 15px;
-  color: #0e5634;
+  color: ${(p) => p.theme.colors.accent};
   font-weight: 700;
   @media ${(p) => p.theme.media.desktop} {
     font-size: 18px;
@@ -61,7 +61,7 @@ export const StyledNavLink = styled(NavLink)`
   border: 2px solid #3e8f849e;
   background-color: transparent;
   border-radius: 4px;
-  color: #0e5634;
+  color: ${(p) => p.theme.colors.accent};
   font-weight: 700;
   @media ${(p) => p.theme.media.desktop} {
     font-size: 18px;

@@ -3,7 +3,7 @@ const theme = {
     background: "#E5E5E5",
     backdrop: " #11111199",
     // accent: "#F59256",
-    accent: " #6648c8",
+    accent: " #0e5634",
 
     text: "#111321",
     primaryText: "#111111",
