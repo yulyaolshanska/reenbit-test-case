@@ -1,78 +1,60 @@
 import styled from "styled-components";
-import { ReactComponent as IconMenu } from "../../img/cross.svg";
+import { FaFacebook } from "react-icons/fa";
 
-export const MyBackdrop = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-
+export const ButtonBox = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-
-  /* background-color: ${(p) => p.theme.colors.backdrop}; */
-  backdrop-filter: blur(10px);
-
-  z-index: 20;
-  overflow-y: auto;
+  justify-content: center;
 `;
 
-export const ModalWindow = styled.div`
-  position: relative;
-
-  width: 280px;
-
-  background-color: white;
-  padding: 40px 20px 40px;
-
-  border-radius: 20px;
-  z-index: 20;
-
-  /* background-color: ${(p) => p.theme.colors.white}; */
-
-  @media ${(p) => p.theme.media.tablet} {
-    padding: 32px 20px;
-
-    width: 608px;
-  }
+export const Title = styled.h1`
+  margin-bottom: 30px;
+  text-align: center;
 `;
-
-export const Exit = styled.button`
+export const ButtonText = styled.span``;
+export const FacebookButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 34px;
-  height: 34px;
+  margin-top: 20px;
+  background-color: #4c69ba;
+  background-image: linear-gradient(#4c69ba, #3b55a0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354c8c;
+  color: rgb(255, 255, 255);
 
-  border-radius: 50%;
+  height: 50px;
+  width: 240px;
   border: none;
+  line-height: 34px;
+  text-align: center;
+  box-shadow: rgb(0 0 0 / 25%) 0px 2px 4px 0px;
+  font-size: 16px;
+  border-radius: 1px;
+  transition: background-color 0.218s ease 0s, border-color 0.218s ease 0s,
+    box-shadow 0.218s ease 0s;
+  font-family: Roboto, arial, sans-serif;
   cursor: pointer;
-
-  z-index: 10;
-  /* background-color: ${(p) => p.theme.colors.background}; */
-
-  @media ${(p) => p.theme.media.tablet} {
-    width: 44px;
-    height: 44px;
+  user-select: none;
+  &:hover,
+  :focus {
+    background-color: #5b7bd5;
+    background-image: linear-gradient(#5b7bd5, #4864b1);
   }
-  &:hover {
-    border: 1px solid;
-    border-color: ${(p) => p.theme.colors.accent};
-  }
+  /* &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: #364e92 1px solid;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png")
+      6px 6px no-repeat;
+  } */
 `;
 
-export const ExitIcon = styled(IconMenu)`
-  width: 16px;
-  height: 16px;
-  /* fill: ${(p) => p.theme.colors.black}; */
-
-  @media ${(p) => p.theme.media.tablet} {
-    width: 20px;
-    height: 20px;
-  }
+export const FacebookIcon = styled(FaFacebook)`
+  margin-right: 16px;
+  width: 20px;
+  height: 20px;
 `;
