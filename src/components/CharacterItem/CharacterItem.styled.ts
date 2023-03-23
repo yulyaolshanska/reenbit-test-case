@@ -15,6 +15,7 @@ export const CharactersItem = styled.li`
     transform: scale(1.03);
   }
   @media screen and (min-width: 768px) and (max-width: 939px) {
+    width: 300px;
     &:not(:nth-child(2n)) {
       margin-right: 20px;
     }
@@ -23,6 +24,7 @@ export const CharactersItem = styled.li`
     }
   }
   @media screen and (min-width: 940px) and (max-width: 1279px) {
+    width: 300px;
     &:not(:nth-child(3n + 3)) {
       margin-right: 20px;
     }
