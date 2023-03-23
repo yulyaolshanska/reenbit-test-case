@@ -1,13 +1,13 @@
 // import React from "react";
 import Login from "components/Login/Login";
-import { Container } from "./SignIn.styled";
+import { Container } from "./LogInPage.styled";
 import { useAppDispatch } from "hooks/hooks";
 import React, { useEffect, useState } from "react";
 import { authSlice } from "redux/authSlice";
 import firebase from "../../firebase/firebase";
 
-const SignIn: React.FC = () => {
-  const { signIn } = authSlice.actions;
+const LoginPage: React.FC = () => {
+  const { logIn } = authSlice.actions;
   const [user, setUser] = useState<object | null>(null);
 
   const dispatch = useAppDispatch();
@@ -15,7 +15,7 @@ const SignIn: React.FC = () => {
 
   useEffect(() => {
     if (user) {
-      dispatch(signIn(user));
+      dispatch(logIn(user));
     }
   }, [user]);
 
@@ -39,4 +39,4 @@ const SignIn: React.FC = () => {
   );
 };
 
-export default SignIn;
+export default LoginPage;

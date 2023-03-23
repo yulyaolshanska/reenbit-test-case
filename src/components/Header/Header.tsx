@@ -1,25 +1,49 @@
 import React from "react";
-import { Link } from "react-router-dom";
-// import { Navigation } from "components/Navigation/Navigation";
-import { Container } from "./Header.styled";
+import {
+  Box,
+  Container,
+  HomeIcon,
+  LoginIcon,
+  LogoutIcon,
+  SignOutButton,
+  StyledNavLink,
+  StyledHomeLink,
+  UserName,
+} from "./Header.styled";
 import { auth } from "../../firebase/firebase";
 import { authSlice } from "redux/authSlice";
-import { useAppDispatch } from "hooks/hooks";
+import { useAppDispatch, useAppSelector } from "hooks/hooks";
 
-export const Header = () => {
-  const { signOut } = authSlice.actions;
+export const Header: React.FC = () => {
+  const userName = useAppSelector(({ auth }) => auth.user.userName);
+  const { logOut } = authSlice.actions;
   const dispatch = useAppDispatch();
+
   const onSignOut = () => {
-    dispatch(signOut());
+    dispatch(logOut());
     auth.signOut();
   };
   return (
     <header>
       <Container>
-        <Link to="/signin">Sign In</Link>
-        <button onClick={onSignOut}>Sign out</button>
-
-        {/* <Navigation /> */}
+        <StyledHomeLink to="/">
+          <HomeIcon /> Home
+        </StyledHomeLink>
+        {userName ? (
+          <Box>
+            <UserName>{userName}</UserName>
+            <SignOutButton onClick={onSignOut}>
+              <LogoutIcon />
+              Log out
+            </SignOutButton>
+          </Box>
+        ) : (
+          <>
+            <StyledNavLink to="/login">
+              <LoginIcon /> Log In
+            </StyledNavLink>
+          </>
+        )}
       </Container>
     </header>
   );

@@ -12,7 +12,7 @@ const CharactersPage = lazy(
 const CharacterDetailsPage = lazy(
   () => import("../pages/CharacterDetailsPage/CharacterDetailsPage")
 );
-const SignInPage = lazy(() => import("../pages/SignIn/SignInPage"));
+const LogInPage = lazy(() => import("../pages/LogInPage/LogInPage"));
 
 export const App: React.FC = () => {
   return (
@@ -23,7 +23,7 @@ export const App: React.FC = () => {
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<CharactersPage />} />
             <Route path="/details/:id" element={<CharacterDetailsPage />} />
-            <Route path="/signin" element={<SignInPage />} />
+            <Route path="/login" element={<LogInPage />} />
           </Route>
         </Routes>
       </Suspense>
