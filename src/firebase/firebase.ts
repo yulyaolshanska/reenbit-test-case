@@ -1,15 +1,26 @@
 import firebase from "firebase/compat/app";
-// import { FacebookAuthProvider } from "firebase/auth";
+// import dotenv from "dotenv";
 import "firebase/compat/auth";
+// dotenv.config();
+
+const {
+  REACT_APP_API_KEY,
+  REACT_APP_AUTH_DOMAIN,
+  REACT_APP_PROJECT_ID,
+  REACT_APP_STORAGE_BUCKET,
+  REACT_APP_SENDER_ID,
+  REACT_APP_APP_ID,
+  REACT_APP_MEASUREMENT_ID,
+} = process.env;
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDuQk5UbQKMGVMPEyJq9VMNW4qX3DUW0nI",
-  authDomain: "rickandmortyapi-1a2c9.firebaseapp.com",
-  projectId: "rickandmortyapi-1a2c9",
-  storageBucket: "rickandmortyapi-1a2c9.appspot.com",
-  messagingSenderId: "27289746210",
-  appId: "1:27289746210:web:e78029b0a8eb7701c3837b",
-  measurementId: "G-X6HFBM0EF3",
+  apiKey: REACT_APP_API_KEY,
+  authDomain: REACT_APP_AUTH_DOMAIN,
+  projectId: REACT_APP_PROJECT_ID,
+  storageBucket: REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: REACT_APP_SENDER_ID,
+  appId: REACT_APP_APP_ID,
+  measurementId: REACT_APP_MEASUREMENT_ID,
 };
 
 firebase.initializeApp(firebaseConfig);
